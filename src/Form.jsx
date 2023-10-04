@@ -17,16 +17,14 @@ const Form = ({ onSearchSubmit }) => {
         aria-label="Weather Search Form"
         aria-labelledby="aria-formLabel"
       >
-        <label htmlFor="cityInput">
-          Enter the name of a city
-          <input
-            id="cityInput"
-            value={input}
-            type="search"
-            aria-label="Search for a city"
-            onChange={(e) => setInput(e.target.value)}
-          />
-        </label>
+        <label htmlFor="cityInput">Enter the name of a city</label>
+        <input
+          id="cityInput"
+          value={input}
+          type="search"
+          aria-label="Search for a city"
+          onChange={(e) => setInput(e.target.value)}
+        />
         <button type="submit">Submit</button>
       </form>
     </div>
