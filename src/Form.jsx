@@ -11,13 +11,18 @@ const Form = ({ onSearchSubmit }) => {
   return (
     <div>
       <h2 id="aria-formLabel">Weather Search Form</h2>
-      <form onSubmit={handleSubmit} aria-labelledby="aria-formLabel">
+      <form
+        onSubmit={handleSubmit}
+        role="search"
+        aria-label="Weather Search Form"
+        aria-labelledby="aria-formLabel"
+      >
         <label htmlFor="cityInput">
-          Search for a city
+          Enter the name of a city
           <input
             id="cityInput"
             value={input}
-            type="text"
+            type="search"
             aria-label="Search for a city"
             onChange={(e) => setInput(e.target.value)}
           />
