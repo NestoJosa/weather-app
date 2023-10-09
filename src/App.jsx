@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import Form from "./Form";
+import Weather from "./Weather";
+
+// const Weather = ({ city }) => {
+//   console.log(city);
+//   return <div>Weather goes here:</div>;
+// };
 
 const App = () => {
   const [city, setCity] = useState("");
@@ -13,10 +19,12 @@ const App = () => {
     <div>
       <h1>Weather App</h1>
       <Form onSearchSubmit={handleSearchSubmit} />
-      <div>
-        <h2>Weather for {city}</h2>
-        {/* Add weather component or data fetching logic here */}
-      </div>
+      {city ? (
+        <div>
+          <h2>Weather for {city}</h2>
+          <Weather city={city} />
+        </div>
+      ) : null}
     </div>
   );
 };
