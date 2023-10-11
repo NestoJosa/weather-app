@@ -3,11 +3,6 @@ import { createRoot } from "react-dom/client";
 import Form from "./Form";
 import Weather from "./Weather";
 
-// const Weather = ({ city }) => {
-//   console.log(city);
-//   return <div>Weather goes here:</div>;
-// };
-
 const App = () => {
   const [city, setCity] = useState("");
 
@@ -21,7 +16,6 @@ const App = () => {
       <Form onSearchSubmit={handleSearchSubmit} />
       {city ? (
         <div>
-          <h2>Weather for {city}</h2>
           <Weather city={city} />
         </div>
       ) : null}

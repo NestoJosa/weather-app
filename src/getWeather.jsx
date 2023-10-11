@@ -12,4 +12,13 @@ const fetchWeather = async (city) => {
   return apiRes.json();
 };
 
-export default fetchWeather;
+const getWeather = async (city) => {
+  try {
+    const results = await fetchWeather(city);
+    return results;
+  } catch (error) {
+    console.log(`Error fetching weather data for ${city}:`, error);
+  }
+};
+
+export default getWeather;
