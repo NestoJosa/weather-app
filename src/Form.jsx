@@ -9,7 +9,7 @@ const Form = ({ onSearchSubmit }) => {
   };
 
   return (
-    <div>
+    <div className="Form">
       <h2 id="aria-formLabel" className="mt-4">
         Search Form
       </h2>
