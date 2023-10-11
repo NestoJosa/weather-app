@@ -13,6 +13,8 @@ const Weather = ({ city }) => {
     fetchData();
   }, [city]);
 
+  console.log(weatherData);
+
   return (
     <div>
       {weatherData ? (
@@ -20,6 +22,14 @@ const Weather = ({ city }) => {
           <h2>Weather in {city}</h2>
           <p>Temperature: {weatherData.main.temp}°C</p>
           <p>Conditions: {weatherData.weather[0].description}</p>
+          <img
+            src={
+              "https://openweathermap.org/img/wn/" +
+              weatherData.weather[0].icon +
+              "@2x.png"
+            }
+            alt=""
+          />
         </div>
       ) : (
         <div>Loading...</div>
