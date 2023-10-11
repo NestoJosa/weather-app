@@ -16,17 +16,19 @@ const Weather = ({ city }) => {
   return (
     <div>
       {weatherData ? (
-        <div>
+        <div className="mt-4">
           <h2>Weather in {city}</h2>
-          <p>Temperature: {weatherData.main.temp}°C</p>
-          <p>Conditions: {weatherData.weather[0].description}</p>
+          <p className="mt-3">Temperature: {weatherData.main.temp}°C</p>
+          <p className="mb-0">
+            Conditions: {weatherData.weather[0].description}
+          </p>
           <img
             src={
               "https://openweathermap.org/img/wn/" +
               weatherData.weather[0].icon +
               "@2x.png"
             }
-            alt=""
+            alt="Weather Info Icon"
           />
         </div>
       ) : (

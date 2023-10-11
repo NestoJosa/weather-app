@@ -12,14 +12,18 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Weather App</h1>
-      <Form onSearchSubmit={handleSearchSubmit} />
-      {city ? (
-        <div>
-          <Weather city={city} />
+    <div className="container mt-5 pt-5">
+      <div className="row justify-content-center">
+        <div className="col col-auto text-center">
+          <h1>Weather App</h1>
+          <Form onSearchSubmit={handleSearchSubmit} />
+          {city ? (
+            <div>
+              <Weather city={city} />
+            </div>
+          ) : null}
         </div>
-      ) : null}
+      </div>
     </div>
   );
 };
