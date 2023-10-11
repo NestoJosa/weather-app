@@ -13,8 +13,6 @@ const Weather = ({ city }) => {
     fetchData();
   }, [city]);
 
-  console.log(weatherData);
-
   return (
     <div>
       {weatherData ? (
