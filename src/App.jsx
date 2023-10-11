@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import Form from "./Form";
 import Weather from "./Weather";
+import "./styles.scss";
 
 const App = () => {
   const [city, setCity] = useState("");
