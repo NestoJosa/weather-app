@@ -14,15 +14,15 @@ const App = () => {
   return (
     <div className="Wrapper container-fluid">
       <div className="row">
-        <div className="col text-center">
-          <div className="row mt-5 pt-5">
+        <div className="col">
+          <div className="row text-center mt-5 pt-5">
             <div className="col">
               <h1 className="Title">Weather App</h1>
             </div>
           </div>
 
-          <div className="row justify-content-center">
-            <div className="col col-md-3">
+          <div className="row text-center justify-content-center">
+            <div className="col-8 col-md-2">
               <Form onSearchSubmit={handleSearchSubmit} />
             </div>
           </div>
