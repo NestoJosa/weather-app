@@ -14,7 +14,7 @@ const Weather = ({ city }) => {
   }, [city]);
 
   return (
-    <div>
+    <div className="Weather">
       {(() => {
         if (weatherData) {
           return (

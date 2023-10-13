@@ -18,10 +18,16 @@ const App = () => {
   };
 
   return (
-    <div className="Wrapper container-fluid">
+    <div
+      className={
+        isDark
+          ? "Wrapper container-fluid"
+          : "Wrapper Wrapper--lightTheme container-fluid"
+      }
+    >
       <div className="row">
         <div className="col">
-          <div className="row">
+          <div className="row text-center mt-4">
             <div className="col">
               <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
             </div>
@@ -40,7 +46,7 @@ const App = () => {
           </div>
 
           {city ? (
-            <div className="row">
+            <div className="row text-center">
               <div className="col">
                 <Weather city={city} />
               </div>
