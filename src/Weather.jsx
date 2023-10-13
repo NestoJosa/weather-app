@@ -35,9 +35,9 @@ const Weather = ({ city }) => {
             </div>
           );
         } else if (weatherData === 0) {
-          return <p>Something went wrong...</p>;
+          return <p className="mt-2">Something went wrong...</p>;
         } else {
-          return <p>Loading...</p>;
+          return <p className="mt-2">Loading...</p>;
         }
       })()}
     </div>
